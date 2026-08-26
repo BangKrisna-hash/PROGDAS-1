@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List <img src="images/icon.png" alt="icon"></h2>
+            
+            <!-- Toast Notification Kustom -->
+            <div id="toast" class="toast"></div>
+
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+
+            <!-- Fitur 1: Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p class="progress-text" id="progress-text">0% completed</p>
+
+            <!-- Fitur 2: Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterTasks('all', this)">All</button>
+                <button class="filter-btn" onclick="filterTasks('active', this)">Active</button>
+                <button class="filter-btn" onclick="filterTasks('completed', this)">Completed</button>
+            </div>
+
+            <ul id="list-container">
+                <!-- Task items akan muncul secara dinamis -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
